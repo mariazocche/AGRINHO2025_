@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛡️ Prevenção de Desastres 🌱</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+    body {
+      background-color: #7ab47f;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #4caf50, #205a23);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+.image-section img {
+  width: 100%;
+  max-width: 400px; /* antes era 600px */
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+
+    .image-section img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.03);
+    }
+
+    .content h2 {
+      color: #205a23;
+      font-weight: 700;
+      margin-top: 40px;
+    }
+
+    .content p, .content ul {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .content li:hover {
+      background-color: #6bc96e1a;
+      border-radius: 5px;
+      padding-left: 5px;
+    }
+
+    .btn-custom {
+      background-color: #4caf501a;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom:hover {
+      background-color: #4caf501a;
+      transform: scale(1.05);
+    }
+
+    .images-row {
+  display: flex;
+  justify-content: center; /* centraliza as imagens */
+  gap: 20px; /* espaço entre as imagens */
+  margin: 30px 0;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 250px; /* tamanho menor */
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.03);
+}
+
+.linha-canto {
+  position: fixed;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #fff, transparent);
+  animation: deslizar 2s linear infinite;
+  opacity: 0.6;
+  z-index: 9999;
+}
+
+.linha-canto.horizontal {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.tree {
+  position: fixed;
+  bottom: 0;
+  animation: subirDesaparecer 5s linear forwards;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@keyframes subirDesaparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="header" data-aos="fade-down">
+      <h1>🛡️ Prevenção de Desastres 🌱</h1>
+      <p>Descubra maneiras de evitar, reduzir e responder melhor aos riscos ambientais e humanos.</p>
+    </div>
+<!-- Container para as imagens lado a lado -->
+<div class="images-row" data-aos="zoom-in">
+  <div class="image-section">
+    <img src="assets/image/4ffb3a9d-d9ab-4f78-b9d0-845e7590aa74.jpg" alt="Prevenção de desastres">
+  </div>
+  <div class="image-section">
+    <img src="assets/image/834338a6-93dd-43e9-9c77-0c17d10e73e7.jpg" alt="Prevenção de desastres">
+  </div>
+</div>
+
+
+    <!-- Conteúdo -->
+    <div class="content" data-aos="fade-up">
+      <h2>🌿 Por que a Prevenção é Importante?</h2>
+      <p>A prevenção é essencial para proteger vidas humanas, preservar o meio ambiente e evitar perdas econômicas. Com ações simples, podemos reduzir significativamente os riscos de desastres.</p>
+    </div>
+
+    <div class="content" data-aos="fade-right">
+      <h2>✅ Medidas Preventivas Naturais</h2>
+      <ul>
+        <li>🌲 <strong>Reflorestamento:</strong> protege o solo e previne enchentes e deslizamentos.</li>
+        <li>💧 <strong>Proteção de nascentes:</strong> garante o abastecimento de água limpa.</li>
+        <li>🏞️ <strong>Criação de áreas de preservação:</strong> protege ecossistemas frágeis.</li>
+        <li>🚯 <strong>Redução de lixo:</strong> evita poluição e alagamentos urbanos.</li>
+      </ul>
+    </div>
+
+    <div class="content" data-aos="fade-left">
+      <h2>🏭 Medidas Contra Desastres Humanos</h2>
+      <ul>
+        <li>📢 <strong>Educação ambiental:</strong> conscientiza a população sobre seus impactos.</li>
+        <li>♻️ <strong>Reciclagem e descarte correto:</strong> evita contaminação de solos e rios.</li>
+        <li>🔍 <strong>Fiscalização:</strong> impede desmatamentos e queimadas ilegais.</li>
+        <li>🏗️ <strong>Planejamento urbano:</strong> previne riscos em áreas vulneráveis.</li>
+      </ul>
+    </div>
+
+    <div class="content" data-aos="fade-up">
+      <h2>🤝 Como Posso Ajudar?</h2>
+      <ul>
+        <li>Participe de campanhas e mutirões ecológicos.</li>
+        <li>Evite o desperdício de água e energia.</li>
+        <li>Se informe sobre os riscos da sua região.</li>
+        <li>Compartilhe informações e incentive boas práticas.</li>
+      </ul>
+    </div>
+
+   <!-- Botão -->
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-custom">🔙 Voltar à Página Inicial</a>
+        </div>
+    </div>
+
+    <!-- Rodapé de largura total -->
+<footer style="width: 100%; background: linear-gradient(135deg, #4caf50, #205a23); color: white; margin-top: 50px; border-radius: 20px 20px 0 0;" class="text-center py-4 shadow-lg">
+  <p style="margin: 0; font-size: 16px;">
+    🌍 <strong>&copy; 2025 AGRINHO</strong> — Todos os direitos reservados.
+  </p>
+</footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+<script>
+  const imagens = ['e57f2231-77cb-4efa-ae57-2dd3a66450a3-removebg-preview.png'];
+
+  function criarArvore() {
+    const arvore = document.createElement('img');
+    arvore.src = 'assets/image/' + imagens[Math.floor(Math.random() * imagens.length)];
+    arvore.classList.add('tree');
+
+    // Posição horizontal aleatória
+    arvore.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+    arvore.style.height = Math.random() * 80 + 40 + 'px';
+
+    document.body.appendChild(arvore);
+
+    // Remover após a animação
+    setTimeout(() => {
+      arvore.remove();
+    }, 5000);
+  }
+
+  // Criar árvores em intervalos
+  setInterval(criarArvore, 1500);
+</script>
+
+</body>
+</html>
+
+<script>
+  function criarLinha(x, y, horizontal = false) {
+    const linha = document.createElement('div');
+    linha.classList.add('linha-canto');
+    if (horizontal) linha.classList.add('horizontal');
+    linha.style.left = x;
+    linha.style.top = y;
+    document.body.appendChild(linha);
+  }
+
+  // Canto superior esquerdo
+  criarLinha('10px', '10px');           // vertical
+  criarLinha('10px', '10px', true);     // horizontal
+
+  // Canto superior direito
+  criarLinha('calc(100% - 10px)', '10px');           
+  criarLinha('calc(100% - 110px)', '10px', true);    
+
+  // Canto inferior esquerdo
+  criarLinha('10px', 'calc(100% - 110px)');           
+  criarLinha('10px', 'calc(100% - 10px)', true);      
+
+  // Canto inferior direito
+  criarLinha('calc(100% - 10px)', 'calc(100% - 110px)');           
+  criarLinha('calc(100% - 110px)', 'calc(100% - 10px)', true);     
+</script>
+
+<script>
+  function criarEstrela() {
+    const estrela = document.createElement('div');
+    estrela.classList.add('estrela');
+    estrela.style.left = Math.random() * window.innerWidth + 'px';
+    estrela.style.width = estrela.style.height = Math.random() * 8 + 4 + 'px'; // tamanho entre 4px e 12px
+    estrela.style.animationDuration = (Math.random() * 1.5 + 1) + 's'; // duração entre 1s e 2.5s
+    document.body.appendChild(estrela);
+
+    setTimeout(() => {
+      estrela.remove();
+    }, 3000);
+  }
+
+  // Lançar de 3 a 5 estrelinhas de cada vez
+  setInterval(() => {
+    const quantidade = Math.floor(Math.random() * 3) + 3; // de 3 a 5
+    for (let i = 0; i < quantidade; i++) {
+      criarEstrela();
+    }
+  }, 700);
+</script>

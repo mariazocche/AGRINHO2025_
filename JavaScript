@@ -1,0 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+  //... seu código atual
+  
+  const imagensHover = document.querySelectorAll("img");
+  imagensHover.forEach(img => {
+    img.classList.add('hover-zoom');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleciona elementos a animar
+  const fadeElements = document.querySelectorAll("h2, .card-text, .card, .cabecalho, .imagem-centralizada, img");
+  fadeElements.forEach(el => {
+    el.classList.add('efeito-fade');
+    observer.observe(el);
+  });
+
+  const zoomElements = document.querySelectorAll(".card img, .navbar");
+  zoomElements.forEach(el => {
+    el.classList.add('efeito-zoom');
+    observer.observe(el);
+  });
+
+  const slideElements = document.querySelectorAll("p.alinha, .card-body, .footer");
+  slideElements.forEach(el => {
+    el.classList.add('efeito-slide');
+    observer.observe(el);
+  });
+
+  const botoes = document.querySelectorAll(".botao");
+  botoes.forEach(btn => btn.classList.add("efeito-botao"));
+
+  // Adiciona animação hover para todas as imagens
+  const imagensHover = document.querySelectorAll("img");
+  imagensHover.forEach(img => {
+    img.classList.add('hover-zoom');
+  });
+});

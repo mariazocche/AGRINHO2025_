@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌪️ Desastres Naturais e Humanos 🌍</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+
+    html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body > .container {
+  flex: 1;
+}
+
+    body {
+      background-color: #bbbbbb;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #464646, #979797);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .image-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .image-section img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.03);
+    }
+
+    .content h2 {
+      color: #666666;
+      font-weight: 700;
+      margin-top: 40px;
+    }
+
+    .content p, .content ul {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .content li:hover {
+      background-color: #acacac;
+      border-radius: 5px;
+      padding-left: 5px;
+    }
+
+    .btn-custom {
+      background-color: #666666;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom:hover {
+      background-color: #666666;
+      transform: scale(1.05);
+    }
+    .linha-canto {
+  position: fixed;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #fff, transparent);
+  animation: deslizar 2s linear infinite;
+  opacity: 0.6;
+  z-index: 9999;
+}
+
+.linha-canto.horizontal {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.tree {
+  position: fixed;
+  bottom: 0;
+  animation: subirDesaparecer 5s linear forwards;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@keyframes subirDesaparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+}
+
+  </style>
+
+</head>
+<body>
+
+
+
+  <div class="container">
+    <!-- Cabeçalho -->
+    <div class="header" data-aos="fade-down">
+      <h1>🌪️ Desastres Naturais e Humanos 🌍</h1>
+      <p>Entenda as principais causas e consequências desses eventos que impactam o planeta.</p>
+    </div>
+
+    <!-- Imagem -->
+      <div class="image-section row justify-content-center" data-aos="zoom-in">
+  <div class="col-md-6 text-center mb-3">
+    <img src="assets/image/913044e0-57aa-4b10-b45f-2bcb27143236.jpg" alt="Imagem sobre o meio ambiente" style="border-radius: 50px;">
+  </div>
+ 
+
+    <!-- Seção: Desastres Naturais -->
+    <div class="content" data-aos="fade-up">
+      <h2>🌋 O que são Desastres Naturais?</h2>
+      <p>São eventos causados por fenômenos da natureza que afetam negativamente a vida, o ambiente ou estruturas humanas. Eles podem ocorrer de forma súbita ou progressiva.</p>
+      <ul>
+        <li>🌪️ <strong>Furacões e Tufões:</strong> tempestades tropicais com ventos intensos.</li>
+        <li>🌊 <strong>Tsunamis:</strong> ondas gigantes provocadas por terremotos submarinos.</li>
+        <li>🔥 <strong>Incêndios florestais:</strong> causados por calor extremo e seca.</li>
+        <li>⛰️ <strong>Terremotos:</strong> tremores de terra causados por movimentação das placas tectônicas.</li>
+        <li>🌧️ <strong>Enchentes:</strong> excesso de água em regiões urbanas e rurais.</li>
+      </ul>
+    </div>
+
+    <!-- Seção: Desastres Humanos -->
+    <div class="content" data-aos="fade-left">
+      <h2>🏭 Desastres Causados pelo Ser Humano</h2>
+      <p>Esses desastres são provocados por ações humanas irresponsáveis, acidentes industriais ou uso excessivo dos recursos naturais.</p>
+      <ul>
+        <li>☢️ <strong>Acidentes nucleares:</strong> como Chernobyl e Fukushima.</li>
+        <li>🛢️ <strong>Derramamento de petróleo:</strong> prejudica oceanos e fauna marinha.</li>
+        <li>🏗️ <strong>Desabamentos urbanos:</strong> falhas em construções ou mineração.</li>
+        <li>🚢 <strong>Poluição marítima:</strong> lixo e plásticos jogados nos oceanos.</li>
+        <li>🔥 <strong>Queimadas ilegais:</strong> prática comum na agricultura extensiva.</li>
+      </ul>
+    </div>
+
+    <!-- Seção: Consequências -->
+    <div class="content" data-aos="fade-right">
+      <h2>📉 Impactos e Consequências</h2>
+      <ul>
+        <li>Perda de vidas humanas e animais.</li>
+        <li>Destruição de comunidades inteiras.</li>
+        <li>Crises econômicas e ambientais.</li>
+        <li>Doenças e contaminação do solo e da água.</li>
+        <li>Deslocamento forçado de populações.</li>
+      </ul>
+    </div>
+
+  <!-- Exemplos -->
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="zoom-in" style="font-weight: bold;">⚠️Tipos Comuns de Desastres⚠️</h2>
+    <div class="row text-center g-4">
+      <div class="col-md-3" data-aos="flip-left">
+        <div class="info-icon">🌋</div>
+        <h5 style="font-weight: bold"> Vulcânicas</h5>
+        <p>Explosões de magma e gases perigosos vindos do interior da Terra.</p>
+      </div>
+      <div class="col-md-3" data-aos="flip-left">
+        <div class="info-icon">🌊</div>
+        <h5 style="font-weight: bold">Tsunamis</h5>
+        <p>Ondas gigantes provocadas por terremotos ou erupções submarinas.</p>
+      </div>
+      <div class="col-md-3" data-aos="flip-left">
+        <div class="info-icon">🌪️</div>
+        <h5 style="font-weight: bold">Furacões</h5>
+        <p>Tempestades tropicais extremamente destrutivas com ventos fortes.</p>
+      </div>
+      <div class="col-md-3" data-aos="flip-left">
+        <div class="info-icon">🌧️</div>
+        <h5 style="font-weight: bold">Enchentes</h5>
+        <p>Excesso de chuvas que alagam áreas urbanas e rurais.</p>
+      </div>
+    </div>
+</div>
+
+<!-- Botão -->
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-custom">🔙 Voltar à Página Inicial</a>
+        </div>
+    </div>
+
+   <!-- Rodapé de largura total -->
+<footer style="width: 100%; background: linear-gradient(135deg, #464646, #979797); color: white; margin-top: 50px; border-radius: 20px 20px 0 0;" class="text-center py-4 shadow-lg">
+  <p style="margin: 0; font-size: 16px;">
+    🌍 <strong>&copy; 2025 AGRINHO</strong> — Todos os direitos reservados.
+  </p>
+</footer>
+
+    <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+<script>
+  const imagens = ['e57f2231-77cb-4efa-ae57-2dd3a66450a3-removebg-preview.png'];
+
+  function criarArvore() {
+    const arvore = document.createElement('img');
+    arvore.src = 'assets/image/' + imagens[Math.floor(Math.random() * imagens.length)];
+    arvore.classList.add('tree');
+
+    // Posição horizontal aleatória
+    arvore.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+    arvore.style.height = Math.random() * 80 + 40 + 'px';
+
+    document.body.appendChild(arvore);
+
+    // Remover após a animação
+    setTimeout(() => {
+      arvore.remove();
+    }, 5000);
+  }
+
+  // Criar árvores em intervalos
+  setInterval(criarArvore, 1500);
+</script>
+
+</body>
+</html>
+
+<script>
+  function criarLinha(x, y, horizontal = false) {
+    const linha = document.createElement('div');
+    linha.classList.add('linha-canto');
+    if (horizontal) linha.classList.add('horizontal');
+    linha.style.left = x;
+    linha.style.top = y;
+    document.body.appendChild(linha);
+  }
+
+  // Canto superior esquerdo
+  criarLinha('10px', '10px');           // vertical
+  criarLinha('10px', '10px', true);     // horizontal
+
+  // Canto superior direito
+  criarLinha('calc(100% - 10px)', '10px');           
+  criarLinha('calc(100% - 110px)', '10px', true);    
+
+  // Canto inferior esquerdo
+  criarLinha('10px', 'calc(100% - 110px)');           
+  criarLinha('10px', 'calc(100% - 10px)', true);      
+
+  // Canto inferior direito
+  criarLinha('calc(100% - 10px)', 'calc(100% - 110px)');           
+  criarLinha('calc(100% - 110px)', 'calc(100% - 10px)', true);     
+</script>
+
+<script>
+  function criarEstrela() {
+    const estrela = document.createElement('div');
+    estrela.classList.add('estrela');
+    estrela.style.left = Math.random() * window.innerWidth + 'px';
+    estrela.style.width = estrela.style.height = Math.random() * 8 + 4 + 'px'; // tamanho entre 4px e 12px
+    estrela.style.animationDuration = (Math.random() * 1.5 + 1) + 's'; // duração entre 1s e 2.5s
+    document.body.appendChild(estrela);
+
+    setTimeout(() => {
+      estrela.remove();
+    }, 3000);
+  }
+
+  // Lançar de 3 a 5 estrelinhas de cada vez
+  setInterval(() => {
+    const quantidade = Math.floor(Math.random() * 3) + 3; // de 3 a 5
+    for (let i = 0; i < quantidade; i++) {
+      criarEstrela();
+    }
+  }, 700);
+</script>

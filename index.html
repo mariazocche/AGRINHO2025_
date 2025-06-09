@@ -1,0 +1,369 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌳Meio-Ambiente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Efeitos visuais CSS -->
+<style>
+  .efeito-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+  }
+
+  .efeito-fade.visivel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .efeito-zoom {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+  }
+
+  .efeito-zoom.visivel {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .efeito-slide {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+  }
+
+  .efeito-slide.visivel {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .efeito-botao:hover {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.8);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .linha-canto {
+  position: fixed;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #fff, transparent);
+  animation: deslizar 2s linear infinite;
+  opacity: 0.6;
+  z-index: 9999;
+}
+
+.linha-canto.horizontal {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.tree {
+  position: fixed;
+  bottom: 0;
+  animation: subirDesaparecer 5s linear forwards;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@keyframes subirDesaparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+}
+
+</style>
+
+<!-- Script para ativar os efeitos -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visivel');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona elementos a animar
+    const fadeElements = document.querySelectorAll("h2, .card-text, .card, .cabecalho, .imagem-centralizada, img");
+    fadeElements.forEach(el => {
+      el.classList.add('efeito-fade');
+      observer.observe(el);
+    });
+
+    const zoomElements = document.querySelectorAll(".card img, .navbar");
+    zoomElements.forEach(el => {
+      el.classList.add('efeito-zoom');
+      observer.observe(el);
+    });
+
+    const slideElements = document.querySelectorAll("p.alinha, .card-body, .footer");
+    slideElements.forEach(el => {
+      el.classList.add('efeito-slide');
+      observer.observe(el);
+    });
+
+    const botoes = document.querySelectorAll(".botao");
+    botoes.forEach(btn => btn.classList.add("efeito-botao"));
+  });
+</script>
+
+<body>
+    <!--Apresentação do tema-->
+    <section class="cabecalho" style="margin-bottom: 0; padding-bottom: 0;">
+  <h1>AGRINHO 2025</h1>
+  <h3>Educação Ambiental</h3>
+</section>
+
+    <!--cabeçalho do site-->
+    <nav class="navbar navbar-expand-lg bg-success" style="margin-top: 0; padding-top: 0;">
+        <div class="container-fluid ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Página Inicial |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="perigos.html">Perigos |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="desastres.html">Desastres |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="prevencao.html">Prevenção</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <!-- Primeira seção a ser dividida-->
+<div class="container">
+  <div class="row pt-5 align-items-center gy-4">
+    <div class="col-md-6">
+      <div>
+        <h2 style="font-weight: bold; margin-bottom: 30px;">🌳Meio Ambiente🌳</h2>
+        <p class="alinha">
+          O meio ambiente é essencial para a vida na Terra, pois fornece recursos como água, ar e solo, além de sustentar a biodiversidade.
+          Sua preservação é crucial para garantir a saúde dos ecossistemas, que regulam o clima e produzem alimentos.
+          A degradação ambiental, resultante de ações humanas, ameaça não apenas a natureza, mas também a qualidade de vida das futuras gerações.
+          Portanto, é fundamental promover a conscientização e ações sustentáveis para proteger o meio ambiente e assegurar um futuro equilibrado.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="assets/image/76239669-c012-4ca8-bb73-423fcd4ccab6.jpg" class="img-fluid jihoon">
+    </div>
+  </div>
+</div>
+
+<div class="ambiente">
+  <div class="imagem-container">
+    <img src="assets/image/1558096f-5c94-4cb3-8286-2ed2bab90e70.jpg" class="imagem-centralizada" alt="...">
+  </div>
+  <div class="card-body" style="gap: 50px;">
+    <h2 class="what-1">O que é❓</h2>
+    <p class="card-text">
+      Educação ambiental é um processo que busca conscientizar as pessoas sobre a importância de proteger a natureza e os recursos naturais. Ela mostra como nossas ações impactam o meio ambiente e incentiva atitudes sustentáveis, como economizar água 💧, reciclar ♻️, preservar florestas 🌳 e evitar o desperdício ⚠️.
+    </p>
+    <h2 class="what-1">Qual o seu objetivo❓</h2>
+    <p>O principal objetivo é formar cidadãos mais conscientes, críticos e responsáveis, capazes de contribuir com soluções para os problemas ambientais. A educação ambiental deve estar presente na escola, na família e na sociedade, sendo essencial para garantir um futuro equilibrado e saudável para todos. 🌍🌱</p>
+  </div>
+</div>
+
+
+<!-- Cards com espaço de 50px acima -->
+<div class="container" style="margin-top: 40px;">
+  <div class="row justify-content-center g-4">
+
+    <div class="col-md-4 col-sm-6">
+      <div class="card border-warning animate__animated animate__fadeIn animate__delay-8s" style="width: 100%;">
+        <img src="assets/image/38865f1f-b5a4-4968-b902-47f0ccf7074e.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title-perigo">Perigos⚠️</h2>
+          <p class="card-text">
+            Não cuidar do meio ambiente traz poluição, mudanças climáticas, extinção de espécies e riscos à saúde. 🌍⚠️ Cuidar da natureza é garantir nosso futuro.
+          </p>
+          <a href="perigos.html" class="botao">Vá para</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="card" style="width: 100%;">
+        <img src="assets/image/68138318-e687-4b42-9b64-5e4fe4d44043.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title-desastre">Desastres🚨</h2>
+          <p class="card-text">
+            Desastres ambientais como queimadas, enchentes e secas prejudicam a natureza e a vida humana. 🌍🚨 Cuidar do meio ambiente ajuda a evitar esses problemas.
+          </p>
+          <a href="desastres.html" class="botao">Vá para</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="card" style="width: 100%;">
+        <img src="assets/image/1848d654-e645-4a6b-a58f-790e00c49ef6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title-prevenir">Prevenção🌱</h2>
+          <p class="card-text">
+          Devemos reduzir e reciclar lixo, economizar água, preservar florestas, usar energias limpas, evitar poluição e promover a conscientização.🌍🌱
+          </p>
+          <a href="prevencao.html" class="botao">Vá para</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+ <!-- Rodapé -->
+     <footer style="background-color: #2a5531; color: #000000; margin-top: 30px;" class="text-center py-3">
+         <p>&copy; 2025 AGRINHO. Todos os direitos reservados.</p>
+     </footer>
+ 
+     <script>
+  const imagens = ['e57f2231-77cb-4efa-ae57-2dd3a66450a3-removebg-preview.png '];
+  function criarArvore() {
+    const arvore = document.createElement('img');
+    arvore.src = 'assets/image/' + imagens[Math.floor(Math.random() * imagens.length)];
+    arvore.classList.add('tree');
+
+    // Posição horizontal aleatória
+    arvore.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+    arvore.style.height = Math.random() * 80 + 40 + 'px';
+
+    document.body.appendChild(arvore);
+
+    // Remover após a animação
+    setTimeout(() => {
+      arvore.remove();
+    }, 5000);
+  }
+
+  // Criar árvores em intervalos
+  setInterval(criarArvore, 1500);
+</script>
+
+
+ </body>
+ 
+ </html>
+ 
+<script>
+  function criarLinha(x, y, horizontal = false) {
+    const linha = document.createElement('div');
+    linha.classList.add('linha-canto');
+    if (horizontal) linha.classList.add('horizontal');
+    linha.style.left = x;
+    linha.style.top = y;
+    document.body.appendChild(linha);
+  }
+
+  // Canto superior esquerdo
+  criarLinha('10px', '10px');           // vertical
+  criarLinha('10px', '10px', true);     // horizontal
+
+  // Canto superior direito
+  criarLinha('calc(100% - 10px)', '10px');           
+  criarLinha('calc(100% - 110px)', '10px', true);    
+
+  // Canto inferior esquerdo
+  criarLinha('10px', 'calc(100% - 110px)');           
+  criarLinha('10px', 'calc(100% - 10px)', true);      
+
+  // Canto inferior direito
+  criarLinha('calc(100% - 10px)', 'calc(100% - 110px)');           
+  criarLinha('calc(100% - 110px)', 'calc(100% - 10px)', true);     
+</script>
+ 
+ <style>
+  .estrela {
+    position: fixed;
+    top: -50px;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, white, yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    z-index: 9999;
+    animation: quedaEstrela 1.5s linear forwards;
+    pointer-events: none;
+  }
+
+  @keyframes quedaEstrela {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(600px, 800px) rotate(720deg);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  function criarEstrela() {
+    const estrela = document.createElement('div');
+    estrela.classList.add('estrela');
+    estrela.style.left = Math.random() * window.innerWidth + 'px';
+    estrela.style.width = estrela.style.height = Math.random() * 8 + 4 + 'px'; // tamanho entre 4px e 12px
+    estrela.style.animationDuration = (Math.random() * 1.5 + 1) + 's'; // duração entre 1s e 2.5s
+    document.body.appendChild(estrela);
+
+    setTimeout(() => {
+      estrela.remove();
+    }, 3000);
+  }
+
+  // Lançar de 3 a 5 estrelinhas de cada vez
+  setInterval(() => {
+    const quantidade = Math.floor(Math.random() * 3) + 3; // de 3 a 5
+    for (let i = 0; i < quantidade; i++) {
+      criarEstrela();
+    }
+  }, 700);
+</script>
